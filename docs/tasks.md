@@ -55,7 +55,7 @@ Each task says what to do, what to run, why it matters, and when it's done.
     `psycopg` is the Postgres driver, `pytest` runs tests.
   - Done when: `uv run python -c "import psycopg; print(psycopg.__version__)"` prints a version.
 
-- [ ] **Task 6: Write a connection helper (`carpool/db.py`)**
+- [ ] **Task 6: Write a connection helper (`src/carpool/db.py`)**
   - A function that reads `DATABASE_URL` from the environment and returns `psycopg.connect(...)`.
   - Run:
     ```bash
@@ -96,7 +96,7 @@ Each task says what to do, what to run, why it matters, and when it's done.
   - Write both in `docs/plan.md`.
   - Why: these are product rules the code depends on.
 
-- [ ] **Task 10: Write the grouping logic in plain Python (`carpool/grouping.py`)**
+- [ ] **Task 10: Write the grouping logic in plain Python (`src/carpool/grouping.py`)**
   - A function that takes a request plus its candidates (plain data, no database) and
     returns a proposed group or `None`. It checks:
     - total riders ≤ 4 and total bags ≤ your limit
@@ -115,7 +115,7 @@ Each task says what to do, what to run, why it matters, and when it's done.
   - Why: proves each rule works and catches later breakage.
   - Done when: all pass, and you've seen each one fail at least once.
 
-- [ ] **Task 12: Connect it to the database (`carpool/matcher.py`)**
+- [ ] **Task 12: Connect it to the database (`src/carpool/matcher.py`)**
   - `match_request(request_id)`:
     1. Run query 1 for candidates.
     2. Call your grouping function.
