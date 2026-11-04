@@ -17,3 +17,6 @@ venv/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Local Claude Code instructions
+CLAUDE.md
