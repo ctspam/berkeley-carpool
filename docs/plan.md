@@ -70,6 +70,10 @@ Relationships:
 
 Filled in by us, not by users. Seed coordinates are approximate; check them on a map.
 
+Seeded points, spread so most riders within 2 km of campus are within 1 km of one:
+Downtown Berkeley BART, Sather Gate, North Gate, North Berkeley BART,
+Telegraph & Dwight, Clark Kerr Campus.
+
 ### trip_requests
 
 | Column | Type | Rules | Stores |

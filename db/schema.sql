@@ -102,6 +102,12 @@ CREATE INDEX group_members_request_idx ON group_members (request_id);
 
 -- Example meeting points. Coordinates are approximate; check them on a map.
 -- ST_MakePoint takes (longitude, latitude): longitude first.
+-- Spread out so most riders within 2 km of campus are within 1 km of one point.
+-- Keep the order: example_data.sql uses Sather Gate as id 2.
 INSERT INTO meeting_points (name, location) VALUES
   ('Downtown Berkeley BART', ST_SetSRID(ST_MakePoint(-122.2681, 37.8700), 4326)::geography),
-  ('Sather Gate',            ST_SetSRID(ST_MakePoint(-122.2595, 37.8703), 4326)::geography);
+  ('Sather Gate',            ST_SetSRID(ST_MakePoint(-122.2595, 37.8703), 4326)::geography),
+  ('North Gate',             ST_SetSRID(ST_MakePoint(-122.2601, 37.8753), 4326)::geography),  -- Northside
+  ('North Berkeley BART',    ST_SetSRID(ST_MakePoint(-122.2834, 37.8740), 4326)::geography),  -- north-west
+  ('Telegraph & Dwight',     ST_SetSRID(ST_MakePoint(-122.2588, 37.8647), 4326)::geography),  -- Southside apartments
+  ('Clark Kerr Campus',      ST_SetSRID(ST_MakePoint(-122.2494, 37.8633), 4326)::geography);  -- south-east dorms
