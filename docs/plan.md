@@ -1,5 +1,8 @@
 # Berkeley Airport Ride Matching: Plan
 
+Progress so far: `docs/progress.md`. Known problems and troubleshooting tree:
+`docs/known-issues.md`.
+
 ## Goal
 
 Automatic ride matching for UC Berkeley students going to or from SFO, OAK, and SJC.
